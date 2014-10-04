@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title></title>
+</head>
+<body ng-app="todoList" ng-controller="mainCtrl">
+
+    <input ng-model="itemToAdd" placeholder="add todo item" />
+    <button ng-click="addItem()"> Add Item </button>
+
+    <ul ng-repeat="items in showItems">
+        {{items}}
+        <button ng-click="removeItem()" ng-model={{items}}> Done </button>
+    </ul>
+
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+    <script src="js/todoService.js"></script>
+
+</body>
+</html>
