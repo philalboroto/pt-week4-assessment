@@ -5,14 +5,14 @@ var app = angular.module('todoList');
 
 app.controller('mainCtrl', function($scope, todoService){
 
-    $scope.showItems = todoService.showItems;
+    $scope.showItems = todoService.showData();
 
     $scope.addItem = function() {
-        todoService.addItem($scope.itemToAdd);
+        todoService.addData($scope.itemToAdd);
     };
 
-    $scope.removeItem = function() {
-        todoService.removeItem($scope.itemToRemove)
+    $scope.removeItem = function(items) {
+        todoService.removeData(items);
     };
 
 });

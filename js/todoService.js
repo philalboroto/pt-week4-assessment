@@ -3,19 +3,19 @@
  */
 var app = angular.module('todoList');
 
-app.service("dataService", function(){
+app.service("todoService", function(){
 
-    var listOfItems = [laundry, grocery];
+    var listOfItems = ["laundry", "grocery"];
 
-    this.showItems = function(){
+    this.showData = function(){
       return listOfItems;
     };
 
-    this.addItem = function(var1) {
+    this.addData = function(var1) {
         listOfItems.push(var1)
     };
 
-    this.removeItem = function(var1) {
+    this.removeData = function(var1) {
         for (var i = 0; i < listOfItems.length; i++) {
             if (listOfItems[i] === var1) {
                 listOfItems.splice(i,1);
